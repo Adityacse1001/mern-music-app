@@ -1,0 +1,16 @@
+/* Import Google Font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.TextInput input,
+.PasswordInput input {
+  @apply bg-gray-800 text-white border-gray-700 placeholder-gray-500 rounded-lg p-2 w-full;
+}
+
+.TextInput label,
+.PasswordInput label {
+  @apply text-gray-400 text-sm mb-1 block;
+}
