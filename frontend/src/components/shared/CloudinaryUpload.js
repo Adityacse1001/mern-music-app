@@ -1,13 +1,13 @@
 import { openUploadWidget } from "../../utils/CloudinaryService";
-import { Cloudinary_upload_preset } from "../../config";
+// import { Cloudinary_upload_preset } from "../../config";
 
 const CloudinaryUpload = ({setUrl,setFileName}) => {
   const uploadImageWidget = () => {
   
-    let myUploadWidget = openUploadWidget(
+  let myUploadWidget = openUploadWidget(
       {
-        cloudName:"dbedqj6do",
-        uploadPreset:Cloudinary_upload_preset,
+        cloudName: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
+        uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET ,
         sources: ["local"],
       },
       function (error, result) {
